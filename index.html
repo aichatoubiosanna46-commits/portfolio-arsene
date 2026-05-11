@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KENZO — Monteur Vidéo & Publicité</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="index.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">KEN<span>ZO</span></a>
+  <ul class="nav-links">
+    <li><a href="javascript:void(0)" onclick="scrollTo('about')">À propos</a></li>
+    <li><a href="javascript:void(0)" onclick="scrollTo('services')">Services</a></li>
+    <li><a href="javascript:void(0)" onclick="scrollTo('portfolio')">Portfolio</a></li>
+    <li><a href="javascript:void(0)" onclick="scrollTo('contact')">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="scrollTo('contact')">Devis Gratuit</button>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="javascript:void(0)" onclick="scrollTo('about');closeMenu()">À Propos</a>
+  <a href="javascript:void(0)" onclick="scrollTo('services');closeMenu()">Services</a>
+  <a href="javascript:void(0)" onclick="scrollTo('portfolio');closeMenu()">Portfolio</a>
+  <a href="javascript:void(0)" onclick="scrollTo('contact');closeMenu()">Contact</a>
+  <a href="javascript:void(0)" class="mob-cta" onclick="scrollTo('contact');closeMenu()">Devis Gratuit →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="hero-tag">▶ Monteur Vidéo & Créateur Publicitaire</p>
+    <h1 class="hero-title">
+      VOTRE <span class="accent">VISION,</span><br>
+      MA <span class="accent">CRÉATION</span>
+    </h1>
+    <p class="hero-desc">
+      Monteur vidéo professionnel spécialisé dans la vidéo publicitaire. Je transforme vos idées en contenus visuels percutants qui captivent, convertissent et marquent les esprits.
+    </p>
+    <div class="hero-buttons">
+      <a href="javascript:void(0)" onclick="scrollTo('portfolio')" class="btn-primary">▶ Voir mes réalisations</a>
+      <a href="javascript:void(0)" onclick="scrollTo('contact')" class="btn-outline">Travailler ensemble →</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">120+</div>
+        <div class="stat-label">Projets livrés</div>
+      </div>
+      <div>
+        <div class="stat-num">5 ans</div>
+        <div class="stat-label">D'expérience</div>
+      </div>
+      <div>
+        <div class="stat-num">98%</div>
+        <div class="stat-label">Clients satisfaits</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-frame">
+      <div class="frame-accent"></div>
+      <div class="frame-accent-br"></div>
+      <div class="hero-frame-inner">
+  <img src="1.jpg" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;" />
+</div>
+    </div>
+    <div class="hero-tag-float">Disponible</div>
+    <div class="hero-tag-float2">Montage Pro</div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item">Montage Vidéo <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Vidéo Publicitaire <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Motion Design <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Color Grading <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Réseaux Sociaux <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Films Institutionnels <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Post-Production <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Montage Vidéo <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Vidéo Publicitaire <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Motion Design <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Color Grading <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Réseaux Sociaux <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Films Institutionnels <span class="ticker-sep">✦</span></span>
+    <span class="ticker-item">Post-Production <span class="ticker-sep">✦</span></span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-visual reveal">
+    <div class="about-accent-bar"></div>
+    <div class="about-img-wrap">
+      <div class="about-img-placeholder">
+        <div class="icon">🎬</div>
+        <div><img src="1.jpg" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;" /></div>
+      </div>
+    </div>
+    <div class="about-years">
+      <span class="about-years-num">5+</span>
+      <span class="about-years-label">Années d'expertise</span>
+    </div>
+  </div>
+  <div class="about-text reveal reveal-delay-2">
+    <p class="section-tag">À propos</p>
+    <h2 class="section-title">QUI<br><span class="accent">SUIS-JE ?</span></h2>
+    <p class="section-body">
+      Je suis un monteur vidéo passionné, spécialisé dans la création de contenus publicitaires qui font la différence. Mon approche combine technique maîtrisée et créativité sans limites pour donner vie à chaque projet.
+    </p>
+    <p class="section-body">
+      De la conception au rendu final, j'accompagne marques, agences et entrepreneurs dans la création de vidéos qui captent l'attention dès les premières secondes.
+    </p>
+    <div class="skills-grid">
+      <span class="skill-tag">Premiere Pro</span>
+      <span class="skill-tag">After Effects</span>
+      <span class="skill-tag">DaVinci Resolve</span>
+      <span class="skill-tag">Final Cut Pro</span>
+      <span class="skill-tag">Motion Design</span>
+      <span class="skill-tag">Color Grading</span>
+    </div>
+    <a href="#" class="btn-primary">Télécharger mon CV ↓</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header reveal">
+    <div>
+      <p class="section-tag">Services</p>
+      <h2 class="section-title">CE QUE<br><span class="accent">JE FAIS</span></h2>
+    </div>
+    <p class="section-body">Des prestations sur mesure pour répondre à tous vos besoins en production vidéo.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="service-icon">✂️</span>
+      <div class="service-name">Montage Vidéo</div>
+      <div class="service-desc">Découpage, assemblage, rythme et narration visuelle pour un rendu professionnel et dynamique.</div>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <span class="service-icon">📢</span>
+      <div class="service-name">Vidéo Publicitaire</div>
+      <div class="service-desc">Spots TV, publicités digitales, campagnes sociales — conçues pour convertir et impacter.</div>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <span class="service-icon">🎨</span>
+      <div class="service-name">Motion Design</div>
+      <div class="service-desc">Animations, titres animés, intros et transitions graphiques qui donnent du caractère à vos vidéos.</div>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-icon">🌈</span>
+      <div class="service-name">Color Grading</div>
+      <div class="service-desc">Étalonnage colorimétrique professionnel pour une esthétique cohérente et émotionnellement forte.</div>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <span class="service-icon">📱</span>
+      <div class="service-name">Contenu Réseaux Sociaux</div>
+      <div class="service-desc">Reels, TikToks, stories — optimisés pour chaque plateforme et maximisant l'engagement.</div>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <span class="service-icon">🏢</span>
+      <div class="service-name">Film Institutionnel</div>
+      <div class="service-desc">Présentation d'entreprise, documentaire corporate, communication interne et externe.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="portfolio-header reveal">
+    <div>
+      <p class="section-tag">Portfolio</p>
+      <h2 class="section-title">MES <span class="accent">RÉALISATIONS</span></h2>
+    </div>
+    <div class="portfolio-filter">
+      <button class="filter-btn active" onclick="filterVideos('all', this)">Tout</button>
+      <button class="filter-btn" onclick="filterVideos('pub', this)">Publicité</button>
+      <button class="filter-btn" onclick="filterVideos('social', this)">Social</button>
+      <button class="filter-btn" onclick="filterVideos('corporate', this)">Corporate</button>
+    </div>
+  </div>
+
+  <div class="videos-grid" id="videosGrid">
+    <!-- VIDEO CARDS — mettez le nom de votre fichier .mp4 ou un lien YouTube -->
+    <div class="video-card reveal" data-cat="pub">
+      <div class="video-thumb">
+        <div class="video-overlay"></div>
+        <div class="video-thumb-bg">📺</div>
+        <div class="video-play-btn" onclick="openLocalVideo('2.mp4')">▶</div>
+        <span class="video-duration">0:45</span>
+      </div>
+      <div class="video-info">
+        <div class="video-cat">Publicité</div>
+        <div class="video-title">Spot TV — Marque X</div>
+      </div>
+    </div>
+
+    <div class="video-card reveal reveal-delay-1" data-cat="social">
+      <div class="video-thumb">
+        <div class="video-overlay"></div>
+        <div class="video-thumb-bg">📱</div>
+        <div class="video-play-btn" onclick="openLocalVideo('video2.mp4')">▶</div>
+        <span class="video-duration">0:30</span>
+      </div>
+      <div class="video-info">
+        <div class="video-cat">Réseaux Sociaux</div>
+        <div class="video-title">Campagne Instagram — Brand Y</div>
+      </div>
+    </div>
+
+    <div class="video-card reveal reveal-delay-2" data-cat="corporate">
+      <div class="video-thumb">
+        <div class="video-overlay"></div>
+        <div class="video-thumb-bg">🏢</div>
+        <div class="video-play-btn" onclick="openLocalVideo('video3.mp4')">▶</div>
+        <span class="video-duration">2:10</span>
+      </div>
+      <div class="video-info">
+        <div class="video-cat">Corporate</div>
+        <div class="video-title">Film Institutionnel — Entreprise Z</div>
+      </div>
+    </div>
+
+    <div class="video-card reveal" data-cat="pub">
+      <div class="video-thumb">
+        <div class="video-overlay"></div>
+        <div class="video-thumb-bg">🎬</div>
+        <div class="video-play-btn" onclick="openLocalVideo('video4.mp4')">▶</div>
+        <span class="video-duration">1:00</span>
+      </div>
+      <div class="video-info">
+        <div class="video-cat">Publicité</div>
+        <div class="video-title">Publicité digitale — Lancement Produit</div>
+      </div>
+    </div>
+
+    <div class="video-card reveal reveal-delay-1" data-cat="social">
+      <div class="video-thumb">
+        <div class="video-overlay"></div>
+        <div class="video-thumb-bg">🎵</div>
+        <div class="video-play-btn" onclick="openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ')">▶</div>
+        <span class="video-duration">0:15</span>
+      </div>
+      <div class="video-info">
+        <div class="video-cat">Réseaux Sociaux</div>
+        <div class="video-title">Reels TikTok — Viral Content</div>
+      </div>
+    </div>
+
+    <!-- ADD VIDEO CARD -->
+    <div class="add-video-card reveal reveal-delay-2" onclick="openAddVideoModal()">
+      <div class="plus">+</div>
+      <div class="label">Ajouter une vidéo</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="reveal" style="text-align:center">
+    <p class="section-tag" style="justify-content:center">Processus</p>
+    <h2 class="section-title">COMMENT JE <span class="accent">TRAVAILLE</span></h2>
+  </div>
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="step-num">01</div>
+      <div class="step-name">Brief & Concept</div>
+      <div class="step-desc">On discute de votre vision, vos objectifs et votre public cible pour définir le cadre créatif.</div>
+    </div>
+    <div class="process-step reveal reveal-delay-1">
+      <div class="step-num">02</div>
+      <div class="step-name">Storyboard</div>
+      <div class="step-desc">Je propose un découpage et un fil narratif avant le début du montage. Zéro surprise.</div>
+    </div>
+    <div class="process-step reveal reveal-delay-2">
+      <div class="step-num">03</div>
+      <div class="step-name">Montage & Motion</div>
+      <div class="step-desc">Montage, effets, color grading, son — chaque détail est soigné pour un résultat premium.</div>
+    </div>
+    <div class="process-step reveal reveal-delay-3">
+      <div class="step-num">04</div>
+      <div class="step-name">Livraison</div>
+      <div class="step-desc">Export dans tous les formats requis, retours intégrés et remise du fichier source.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="reveal" style="text-align:center">
+    <p class="section-tag" style="justify-content:center">Témoignages</p>
+    <h2 class="section-title">CE QU'ILS <span class="accent">DISENT</span></h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card reveal">
+      <p class="testi-text">Un travail exceptionnel. La vidéo publicitaire livrée a généré 3x plus de conversions que nos précédentes campagnes. Je recommande sans hésitation.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">AM</div>
+        <div>
+          <div class="testi-name">Amadou Mbaye</div>
+          <div class="testi-role">Directeur Marketing, TechCo</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card reveal reveal-delay-1">
+      <p class="testi-text">Professionnalisme, rapidité et créativité au rendez-vous. Notre film institutionnel a été unanimement applaudi en board meeting. Top qualité.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">SF</div>
+        <div>
+          <div class="testi-name">Sophie Fontaine</div>
+          <div class="testi-role">CEO, Agence Impact</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card reveal reveal-delay-2">
+      <p class="testi-text">Mes reels ont explosé en termes d'engagement depuis que je travaille avec lui. Il comprend parfaitement les codes des réseaux sociaux. Excellent!</p>
+      <div class="testi-author">
+        <div class="testi-avatar">KD</div>
+        <div>
+          <div class="testi-name">Kofi Danso</div>
+          <div class="testi-role">Influenceur & Entrepreneur</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <p class="cta-tag">Prêt à démarrer?</p>
+  <h2 class="cta-title">TRAVAILLONS<br>ENSEMBLE</h2>
+  <p class="cta-desc">Votre prochain projet vidéo mérite d'être inoubliable. Discutons-en maintenant.</p>
+  <a href="javascript:void(0)" onclick="scrollTo('contact')" class="btn-dark">Démarrer un projet ↗</a>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-info reveal">
+    <p class="section-tag">Contact</p>
+    <h2 class="section-title">PARLONS DE<br><span class="accent">VOTRE PROJET</span></h2>
+    <p class="section-body">Que ce soit pour une publicité, un clip, un film corporate ou du contenu social, je suis là pour vous.</p>
+    <ul class="contact-list">
+      <li><div class="ci">📍</div> Cotonou, Bénin (disponible worldwide)</li>
+      <li><div class="ci">📧</div> contact@kenzofilms.com</li>
+      <li><div class="ci">📱</div> +229 00 00 00 00</li>
+      <li><div class="ci">⏱</div> Réponse sous 24h</li>
+    </ul>
+  </div>
+  <div class="contact-form reveal reveal-delay-2">
+    <div class="form-group">
+      <label>Votre nom complet</label>
+      <input type="text" placeholder="Jean Dupont" />
+    </div>
+    <div class="form-group">
+      <label>Adresse email</label>
+      <input type="email" placeholder="jean@exemple.com" />
+    </div>
+    <div class="form-group">
+      <label>Type de projet</label>
+      <select>
+        <option value="">Sélectionner...</option>
+        <option>Vidéo Publicitaire</option>
+        <option>Montage Vidéo</option>
+        <option>Film Institutionnel</option>
+        <option>Contenu Réseaux Sociaux</option>
+        <option>Motion Design</option>
+        <option>Autre</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Décrivez votre projet</label>
+      <textarea placeholder="Parlez-moi de votre vision, vos délais, votre budget approximatif..."></textarea>
+    </div>
+    <button class="btn-primary" style="width:100%;justify-content:center" type="button">
+      Envoyer le message ↗
+    </button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="footer-logo">KENZO</a>
+  <p class="footer-copy">© 2024 Kenzo Films. Tous droits réservés.</p>
+  <div class="footer-social">
+    <a href="#" class="soc-btn">in</a>
+    <a href="#" class="soc-btn">yt</a>
+    <a href="#" class="soc-btn">ig</a>
+    <a href="#" class="soc-btn">tt</a>
+  </div>
+</footer>
+
+<!-- VIDEO MODAL -->
+<div class="modal-overlay" id="videoModal" onclick="closeVideo(event)">
+  <div class="modal" style="padding:0;background:#000;border-color:rgba(245,197,24,0.3);width:min(800px,90vw)">
+    <iframe id="videoFrame" width="100%" style="aspect-ratio:16/9;display:block;border:none" src="" allowfullscreen></iframe>
+    <button class="modal-close" onclick="closeVideoModal()" style="color:var(--yellow);top:0.5rem;right:0.7rem;font-size:1.5rem;background:rgba(0,0,0,0.7)">✕</button>
+  </div>
+</div>
+
+<!-- ADD VIDEO MODAL -->
+<div class="modal-overlay" id="addVideoModal" onclick="closeAddModal(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('addVideoModal').classList.remove('active')">✕</button>
+    <div class="modal-title">AJOUTER UNE VIDÉO</div>
+    <div class="modal-form-group">
+      <label>Titre de la vidéo</label>
+      <input type="text" id="vidTitle" placeholder="Ex: Spot TV — Marque X" />
+    </div>
+    <div class="modal-form-group">
+      <label>Catégorie</label>
+      <select id="vidCat" style="width:100%;background:var(--black-2);border:1px solid rgba(255,255,255,0.08);color:var(--white);padding:0.8rem;font-family:'Syne',sans-serif;font-size:0.9rem;outline:none;">
+        <option value="pub">Publicité</option>
+        <option value="social">Réseaux Sociaux</option>
+        <option value="corporate">Corporate</option>
+      </select>
+    </div>
+    <div class="modal-form-group">
+      <label>Fichier local (.mp4) ou lien YouTube</label>
+      <input type="text" id="vidUrl" placeholder="video.mp4  ou  https://youtube.com/watch?v=..." />
+    </div>
+    <div class="modal-form-group">
+      <label>Durée</label>
+      <input type="text" id="vidDuration" placeholder="Ex: 0:45" />
+    </div>
+    <p class="modal-note">✦ Collez l'URL complète YouTube ou Vimeo. La vidéo s'affichera dans la grille de réalisations.</p>
+    <button class="btn-primary" style="width:100%;justify-content:center;margin-top:1.2rem" onclick="addVideo()">Ajouter la vidéo ↗</button>
+  </div>
+</div>
+
+<script>
+  // AUTO THUMBNAIL — génère aperçu depuis la vidéo locale
+  function generateThumbnail(videoSrc, thumbEl) {
+    const video = document.createElement('video');
+    video.src = videoSrc;
+    video.crossOrigin = 'anonymous';
+    video.muted = true;
+    video.playsInline = true;
+    video.currentTime = 1; // capture à 1 seconde
+
+    video.addEventListener('seeked', () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = video.videoWidth || 640;
+      canvas.height = video.videoHeight || 360;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      const dataURL = canvas.toDataURL('image/jpeg');
+      thumbEl.style.backgroundImage = `url(${dataURL})`;
+      thumbEl.style.backgroundSize = 'cover';
+      thumbEl.style.backgroundPosition = 'center';
+      // Enlève l'icône emoji une fois l'aperçu chargé
+      const bg = thumbEl.querySelector('.video-thumb-bg');
+      if (bg) bg.style.display = 'none';
+      video.remove();
+    }, { once: true });
+
+    video.addEventListener('error', () => {
+      // Si erreur (fichier pas encore uploadé), garde l'icône
+      video.remove();
+    });
+
+    video.load();
+  }
+
+  // Lance la génération pour toutes les cartes vidéo locales au chargement
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.video-card').forEach(card => {
+      const btn = card.querySelector('.video-play-btn');
+      if (!btn) return;
+      const onclick = btn.getAttribute('onclick') || '';
+      const match = onclick.match(/openLocalVideo\('(.+?)'\)/);
+      if (match) {
+        const thumbEl = card.querySelector('.video-thumb');
+        if (thumbEl) generateThumbnail(match[1], thumbEl);
+      }
+    });
+  });
+
+  // SCROLL REVEAL
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // VIDEO MODAL — YouTube ou local
+  function openVideo(url) {
+    document.getElementById('videoFrame').src = url + '?autoplay=1';
+    document.getElementById('videoModal').classList.add('active');
+  }
+
+  function openLocalVideo(src) {
+    const modal = document.getElementById('videoModal');
+    modal.innerHTML = `
+      <div style="position:relative;width:min(800px,90vw)">
+        <video controls autoplay style="width:100%;aspect-ratio:16/9;display:block;background:#000">
+          <source src="${src}" type="video/mp4">
+        </video>
+        <button onclick="closeLocalVideo()" style="position:absolute;top:0.5rem;right:0.7rem;background:rgba(0,0,0,0.7);border:none;color:#f5c518;font-size:1.5rem;cursor:pointer">✕</button>
+      </div>`;
+    modal.classList.add('active');
+  }
+
+  function closeLocalVideo() {
+    const modal = document.getElementById('videoModal');
+    modal.classList.remove('active');
+    modal.innerHTML = `
+      <div class="modal" style="padding:0;background:#000;border-color:rgba(245,197,24,0.3);width:min(800px,90vw)">
+        <iframe id="videoFrame" width="100%" style="aspect-ratio:16/9;display:block;border:none" src="" allowfullscreen></iframe>
+        <button class="modal-close" onclick="closeVideoModal()" style="color:var(--yellow);top:0.5rem;right:0.7rem;font-size:1.5rem;background:rgba(0,0,0,0.7)">✕</button>
+      </div>`;
+  }
+
+  function closeVideoModal() {
+    const modal = document.getElementById('videoModal');
+    modal.classList.remove('active');
+    const frame = document.getElementById('videoFrame');
+    if (frame) frame.src = '';
+  }
+  function closeVideo(e) {
+    if (e.target === document.getElementById('videoModal')) {
+      const frame = document.getElementById('videoFrame');
+      if (frame) closeVideoModal(); else closeLocalVideo();
+    }
+  }
+
+  // ADD VIDEO MODAL
+  function openAddVideoModal() {
+    document.getElementById('addVideoModal').classList.add('active');
+  }
+  function closeAddModal(e) {
+    if (e.target === document.getElementById('addVideoModal'))
+      document.getElementById('addVideoModal').classList.remove('active');
+  }
+
+  function getYouTubeId(url) {
+    const m = url.match(/(?:v=|youtu\.be\/|embed\/)([A-Za-z0-9_-]{11})/);
+    return m ? m[1] : null;
+  }
+
+  function addVideo() {
+    const title = document.getElementById('vidTitle').value.trim();
+    const cat = document.getElementById('vidCat').value;
+    const url = document.getElementById('vidUrl').value.trim();
+    const duration = document.getElementById('vidDuration').value.trim() || '—';
+    if (!title || !url) { alert('Titre et URL requis.'); return; }
+
+    const ytId = getYouTubeId(url);
+    const isLocal = !ytId && (url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.mov'));
+    const embedUrl = ytId ? `https://www.youtube.com/embed/${ytId}` : url;
+    const thumb = ytId ? `https://img.youtube.com/vi/${ytId}/hqdefault.jpg` : '';
+    const onclickFn = isLocal
+      ? `openLocalVideo('${url}')`
+      : `openVideo('${embedUrl}')`;
+
+    const catLabels = { pub: 'Publicité', social: 'Réseaux Sociaux', corporate: 'Corporate' };
+    const icons = { pub: '📺', social: '📱', corporate: '🏢' };
+
+    const card = document.createElement('div');
+    card.className = 'video-card reveal visible';
+    card.dataset.cat = cat;
+    card.innerHTML = `
+      <div class="video-thumb" style="${thumb ? `background-image:url(${thumb});background-size:cover;background-position:center` : ''}">
+        <div class="video-overlay"></div>
+        ${!thumb ? `<div class="video-thumb-bg">${icons[cat] || '🎬'}</div>` : ''}
+        <div class="video-play-btn" onclick="${onclickFn}">▶</div>
+        <span class="video-duration">${duration}</span>
+      </div>
+      <div class="video-info">
+        <div class="video-cat">${catLabels[cat]}</div>
+        <div class="video-title">${title}</div>
+      </div>`;
+
+    const grid = document.getElementById('videosGrid');
+    const addBtn = grid.querySelector('.add-video-card');
+    grid.insertBefore(card, addBtn);
+
+    // Génère thumbnail automatiquement si vidéo locale
+    if (isLocal) {
+      const thumbEl = card.querySelector('.video-thumb');
+      if (thumbEl) generateThumbnail(url, thumbEl);
+    }
+
+    document.getElementById('addVideoModal').classList.remove('active');
+    document.getElementById('vidTitle').value = '';
+    document.getElementById('vidUrl').value = '';
+    document.getElementById('vidDuration').value = '';
+  }
+
+  // FILTER
+  function filterVideos(cat, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('#videosGrid .video-card, .add-video-card').forEach(card => {
+      if (cat === 'all' || card.dataset.cat === cat || card.classList.contains('add-video-card')) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // SMOOTH SCROLL — no hash in URL
+  function scrollTo(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Keep URL clean — remove any hash
+    history.replaceState(null, '', window.location.pathname);
+  }
+
+  // Remove hash on page load if any
+  if (window.location.hash) {
+    history.replaceState(null, '', window.location.pathname);
+  }
+
+  function scrollToContact() { scrollTo('contact'); }
+  function toggleMenu() {
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+</script>
+</body>
+</html>
