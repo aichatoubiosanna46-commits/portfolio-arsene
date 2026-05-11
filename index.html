@@ -13,12 +13,12 @@
 <nav>
   <a href="#" class="nav-logo">KEN<span>ZO</span></a>
   <ul class="nav-links">
-    <li><a href="javascript:void(0)" onclick="scrollTo('about')">À propos</a></li>
-    <li><a href="javascript:void(0)" onclick="scrollTo('services')">Services</a></li>
-    <li><a href="javascript:void(0)" onclick="scrollTo('portfolio')">Portfolio</a></li>
-    <li><a href="javascript:void(0)" onclick="scrollTo('contact')">Contact</a></li>
+    <li><a href="javascript:void(0)" onclick="scrollToSection('about')">À propos</a></li>
+    <li><a href="javascript:void(0)" onclick="scrollToSection('services')">Services</a></li>
+    <li><a href="javascript:void(0)" onclick="scrollToSection('portfolio')">Portfolio</a></li>
+    <li><a href="javascript:void(0)" onclick="scrollToSection('contact')">Contact</a></li>
   </ul>
-  <button class="nav-cta" onclick="scrollTo('contact')">Devis Gratuit</button>
+  <button class="nav-cta" onclick="scrollToSection('contact')">Devis Gratuit</button>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -26,11 +26,11 @@
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="javascript:void(0)" onclick="scrollTo('about');closeMenu()">À Propos</a>
-  <a href="javascript:void(0)" onclick="scrollTo('services');closeMenu()">Services</a>
-  <a href="javascript:void(0)" onclick="scrollTo('portfolio');closeMenu()">Portfolio</a>
-  <a href="javascript:void(0)" onclick="scrollTo('contact');closeMenu()">Contact</a>
-  <a href="javascript:void(0)" class="mob-cta" onclick="scrollTo('contact');closeMenu()">Devis Gratuit →</a>
+  <a href="javascript:void(0)" onclick="scrollToSection('about');closeMenu()">À Propos</a>
+  <a href="javascript:void(0)" onclick="scrollToSection('services');closeMenu()">Services</a>
+  <a href="javascript:void(0)" onclick="scrollToSection('portfolio');closeMenu()">Portfolio</a>
+  <a href="javascript:void(0)" onclick="scrollToSection('contact');closeMenu()">Contact</a>
+  <a href="javascript:void(0)" class="mob-cta" onclick="scrollToSection('contact');closeMenu()">Devis Gratuit →</a>
 </div>
 
 <!-- HERO -->
@@ -45,8 +45,8 @@
       Monteur vidéo professionnel spécialisé dans la vidéo publicitaire. Je transforme vos idées en contenus visuels percutants qui captivent, convertissent et marquent les esprits.
     </p>
     <div class="hero-buttons">
-      <a href="javascript:void(0)" onclick="scrollTo('portfolio')" class="btn-primary">▶ Voir mes réalisations</a>
-      <a href="javascript:void(0)" onclick="scrollTo('contact')" class="btn-outline">Travailler ensemble →</a>
+      <a href="javascript:void(0)" onclick="scrollToSection('portfolio')" class="btn-primary">▶ Voir mes réalisations</a>
+      <a href="javascript:void(0)" onclick="scrollToSection('contact')" class="btn-outline">Travailler ensemble →</a>
     </div>
     <div class="hero-stats">
       <div>
@@ -68,8 +68,8 @@
       <div class="frame-accent"></div>
       <div class="frame-accent-br"></div>
       <div class="hero-frame-inner">
-  <img src="1.jpeg" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;" />
-</div>
+        <img src="1.jpeg" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;" />
+      </div>
     </div>
     <div class="hero-tag-float">Disponible</div>
     <div class="hero-tag-float2">Montage Pro</div>
@@ -91,7 +91,6 @@
     <span class="ticker-item">Motion Design <span class="ticker-sep">✦</span></span>
     <span class="ticker-item">Color Grading <span class="ticker-sep">✦</span></span>
     <span class="ticker-item">Réseaux Sociaux <span class="ticker-sep">✦</span></span>
-   
   </div>
 </div>
 
@@ -100,10 +99,7 @@
   <div class="about-visual reveal">
     <div class="about-accent-bar"></div>
     <div class="about-img-wrap">
-      <div class="about-img-placeholder">
-        <div class="icon">🎬</div>
-        <div><img src="1.jpeg" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;" /></div>
-      </div>
+      <img src="1.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;" />
     </div>
     <div class="about-years">
       <span class="about-years-num">1+</span>
@@ -127,7 +123,6 @@
       <span class="skill-tag">Motion Design</span>
       <span class="skill-tag">Color Grading</span>
     </div>
-   
   </div>
 </section>
 
@@ -190,7 +185,6 @@
   </div>
 
   <div class="videos-grid" id="videosGrid">
-    <!-- VIDEO CARDS — mettez le nom de votre fichier .mp4 ou un lien YouTube -->
     <div class="video-card reveal" data-cat="pub">
       <div class="video-thumb">
         <div class="video-overlay"></div>
@@ -213,7 +207,7 @@
       </div>
       <div class="video-info">
         <div class="video-cat">Réseaux Sociaux</div>
-        <div class="video-title">Campagne Instagram  Brand Y</div>
+        <div class="video-title">Campagne Instagram Brand Y</div>
       </div>
     </div>
 
@@ -239,7 +233,7 @@
       </div>
       <div class="video-info">
         <div class="video-cat">Publicité</div>
-        <div class="video-title">Publicité digitale  Lancement Produit</div>
+        <div class="video-title">Publicité digitale Lancement Produit</div>
       </div>
     </div>
 
@@ -247,7 +241,7 @@
       <div class="video-thumb">
         <div class="video-overlay"></div>
         <div class="video-thumb-bg">🎵</div>
-         <div class="video-play-btn" onclick="openLocalVideo('6.mp4')">▶</div>
+        <div class="video-play-btn" onclick="openLocalVideo('6.mp4')">▶</div>
         <span class="video-duration">0:15</span>
       </div>
       <div class="video-info">
@@ -255,8 +249,6 @@
         <div class="video-title">Reels TikTok — Viral Content</div>
       </div>
     </div>
-
-    
   </div>
 </section>
 
@@ -335,7 +327,7 @@
   <p class="cta-tag">Prêt à démarrer?</p>
   <h2 class="cta-title">TRAVAILLONS<br>ENSEMBLE</h2>
   <p class="cta-desc">Votre prochain projet vidéo mérite d'être inoubliable. Discutons-en maintenant.</p>
-  <a href="javascript:void(0)" onclick="scrollTo('contact')" class="btn-dark">Démarrer un projet ↗</a>
+  <a href="javascript:void(0)" onclick="scrollToSection('contact')" class="btn-dark">Démarrer un projet ↗</a>
 </section>
 
 <!-- CONTACT -->
@@ -402,51 +394,36 @@
   </div>
 </div>
 
-
-  
-    
-
 <script>
-  // AUTO THUMBNAIL — génère aperçu depuis la vidéo locale
+  // AUTO THUMBNAIL
   function generateThumbnail(videoSrc, thumbEl) {
     const video = document.createElement('video');
     video.src = videoSrc;
     video.crossOrigin = 'anonymous';
     video.muted = true;
     video.playsInline = true;
-    video.currentTime = 1; // capture à 1 seconde
-
+    video.currentTime = 1;
     video.addEventListener('seeked', () => {
       const canvas = document.createElement('canvas');
       canvas.width = video.videoWidth || 640;
       canvas.height = video.videoHeight || 360;
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-      const dataURL = canvas.toDataURL('image/jpeg');
-      thumbEl.style.backgroundImage = `url(${dataURL})`;
+      canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+      thumbEl.style.backgroundImage = `url(${canvas.toDataURL('image/jpeg')})`;
       thumbEl.style.backgroundSize = 'cover';
       thumbEl.style.backgroundPosition = 'center';
-      // Enlève l'icône emoji une fois l'aperçu chargé
       const bg = thumbEl.querySelector('.video-thumb-bg');
       if (bg) bg.style.display = 'none';
       video.remove();
     }, { once: true });
-
-    video.addEventListener('error', () => {
-      // Si erreur (fichier pas encore uploadé), garde l'icône
-      video.remove();
-    });
-
+    video.addEventListener('error', () => video.remove());
     video.load();
   }
 
-  // Lance la génération pour toutes les cartes vidéo locales au chargement
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.video-card').forEach(card => {
       const btn = card.querySelector('.video-play-btn');
       if (!btn) return;
-      const onclick = btn.getAttribute('onclick') || '';
-      const match = onclick.match(/openLocalVideo\('(.+?)'\)/);
+      const match = (btn.getAttribute('onclick') || '').match(/openLocalVideo\('(.+?)'\)/);
       if (match) {
         const thumbEl = card.querySelector('.video-thumb');
         if (thumbEl) generateThumbnail(match[1], thumbEl);
@@ -459,6 +436,17 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // SMOOTH SCROLL — sans hash dans l'URL
+  function scrollToSection(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    history.replaceState(null, '', window.location.pathname);
+  }
+  if (window.location.hash) {
+    history.replaceState(null, '', window.location.pathname);
+  }
 
   // VIDEO MODAL — YouTube ou local
   function openVideo(url) {
@@ -494,6 +482,7 @@
     const frame = document.getElementById('videoFrame');
     if (frame) frame.src = '';
   }
+
   function closeVideo(e) {
     if (e.target === document.getElementById('videoModal')) {
       const frame = document.getElementById('videoFrame');
@@ -501,102 +490,19 @@
     }
   }
 
-  // ADD VIDEO MODAL
-  function openAddVideoModal() {
-    document.getElementById('addVideoModal').classList.add('active');
-  }
-  function closeAddModal(e) {
-    if (e.target === document.getElementById('addVideoModal'))
-      document.getElementById('addVideoModal').classList.remove('active');
-  }
-
-  function getYouTubeId(url) {
-    const m = url.match(/(?:v=|youtu\.be\/|embed\/)([A-Za-z0-9_-]{11})/);
-    return m ? m[1] : null;
-  }
-
-  function addVideo() {
-    const title = document.getElementById('vidTitle').value.trim();
-    const cat = document.getElementById('vidCat').value;
-    const url = document.getElementById('vidUrl').value.trim();
-    const duration = document.getElementById('vidDuration').value.trim() || '—';
-    if (!title || !url) { alert('Titre et URL requis.'); return; }
-
-    const ytId = getYouTubeId(url);
-    const isLocal = !ytId && (url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.mov'));
-    const embedUrl = ytId ? `https://www.youtube.com/embed/${ytId}` : url;
-    const thumb = ytId ? `https://img.youtube.com/vi/${ytId}/hqdefault.jpg` : '';
-    const onclickFn = isLocal
-      ? `openLocalVideo('${url}')`
-      : `openVideo('${embedUrl}')`;
-
-    const catLabels = { pub: 'Publicité', social: 'Réseaux Sociaux', corporate: 'Corporate' };
-    const icons = { pub: '📺', social: '📱', corporate: '🏢' };
-
-    const card = document.createElement('div');
-    card.className = 'video-card reveal visible';
-    card.dataset.cat = cat;
-    card.innerHTML = `
-      <div class="video-thumb" style="${thumb ? `background-image:url(${thumb});background-size:cover;background-position:center` : ''}">
-        <div class="video-overlay"></div>
-        ${!thumb ? `<div class="video-thumb-bg">${icons[cat] || '🎬'}</div>` : ''}
-        <div class="video-play-btn" onclick="${onclickFn}">▶</div>
-        <span class="video-duration">${duration}</span>
-      </div>
-      <div class="video-info">
-        <div class="video-cat">${catLabels[cat]}</div>
-        <div class="video-title">${title}</div>
-      </div>`;
-
-    const grid = document.getElementById('videosGrid');
-    const addBtn = grid.querySelector('.add-video-card');
-    grid.insertBefore(card, addBtn);
-
-    // Génère thumbnail automatiquement si vidéo locale
-    if (isLocal) {
-      const thumbEl = card.querySelector('.video-thumb');
-      if (thumbEl) generateThumbnail(url, thumbEl);
-    }
-
-    document.getElementById('addVideoModal').classList.remove('active');
-    document.getElementById('vidTitle').value = '';
-    document.getElementById('vidUrl').value = '';
-    document.getElementById('vidDuration').value = '';
-  }
-
   // FILTER
   function filterVideos(cat, btn) {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    document.querySelectorAll('#videosGrid .video-card, .add-video-card').forEach(card => {
-      if (cat === 'all' || card.dataset.cat === cat || card.classList.contains('add-video-card')) {
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
-      }
+    document.querySelectorAll('#videosGrid .video-card').forEach(card => {
+      card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
     });
   }
 
-  // SMOOTH SCROLL — no hash in URL
-  function scrollTo(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    // Keep URL clean — remove any hash
-    history.replaceState(null, '', window.location.pathname);
-  }
-
-  // Remove hash on page load if any
-  if (window.location.hash) {
-    history.replaceState(null, '', window.location.pathname);
-  }
-
-  function scrollToContact() { scrollTo('contact'); }
+  // HAMBURGER MENU
   function toggleMenu() {
-    const btn = document.getElementById('hamburger');
-    const menu = document.getElementById('mobileMenu');
-    btn.classList.toggle('open');
-    menu.classList.toggle('open');
+    document.getElementById('hamburger').classList.toggle('open');
+    document.getElementById('mobileMenu').classList.toggle('open');
   }
   function closeMenu() {
     document.getElementById('hamburger').classList.remove('open');
