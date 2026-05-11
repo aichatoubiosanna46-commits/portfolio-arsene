@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KENZO — Monteur Vidéo & Publicité</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
   <link href="index.css" rel="stylesheet">
+  <style>
+    /* MODE NUIT / JOUR */
+    :root {
+      --bg: #0a0a0a;
+      --bg2: #111111;
+      --bg3: #1a1a1a;
+      --text: #f0f0f0;
+      --gray: #888;
+      --yellow: #f5c518;
+      --yellow-dim: #c9a010;
+      --yellow-glow: rgba(245,197,24,0.15);
+    }
+    [data-theme="light"] {
+      --bg: #f5f5f0;
+      --bg2: #ebebeb;
+      --bg3: #e0e0d8;
+      --text: #111111;
+      --gray: #555;
+      --yellow: #d4a017;
+      --yellow-dim: #b8860b;
+      --yellow-glow: rgba(212,160,23,0.15);
+    }
+
+    /* BOUTON TOGGLE */
+    .theme-toggle {
+      background: var(--bg3);
+      border: 1px solid rgba(245,197,24,0.3);
+      color: var(--text);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s, border-color 0.3s, transform 0.2s;
+      flex-shrink: 0;
+    }
+    .theme-toggle:hover {
+      border-color: var(--yellow);
+      transform: rotate(20deg);
+    }
+
+    /* TRANSITION GLOBALE DOUCE */
+    body, nav, section, footer, .service-card, .video-card, .testi-card, .skill-tag {
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+  </style>
 </head>
 <body>
 
@@ -18,7 +67,10 @@
     <li><a href="javascript:void(0)" onclick="scrollToSection('portfolio')">Portfolio</a></li>
     <li><a href="javascript:void(0)" onclick="scrollToSection('contact')">Contact</a></li>
   </ul>
-  <button class="nav-cta" onclick="scrollToSection('contact')">Devis Gratuit</button>
+  <div style="display:flex;align-items:center;gap:1rem;">
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Mode nuit / jour">🌙</button>
+    <button class="nav-cta" onclick="scrollToSection('contact')">Devis Gratuit</button>
+  </div>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -183,7 +235,6 @@
       <button class="filter-btn" onclick="filterVideos('corporate', this)">Corporate</button>
     </div>
   </div>
-
   <div class="videos-grid" id="videosGrid">
     <div class="video-card reveal" data-cat="pub">
       <div class="video-thumb">
@@ -197,7 +248,6 @@
         <div class="video-title">Spot TV Marque X</div>
       </div>
     </div>
-
     <div class="video-card reveal reveal-delay-1" data-cat="social">
       <div class="video-thumb">
         <div class="video-overlay"></div>
@@ -210,7 +260,6 @@
         <div class="video-title">Campagne Instagram Brand Y</div>
       </div>
     </div>
-
     <div class="video-card reveal reveal-delay-2" data-cat="corporate">
       <div class="video-thumb">
         <div class="video-overlay"></div>
@@ -223,7 +272,6 @@
         <div class="video-title">Film Institutionnel Entreprise Z</div>
       </div>
     </div>
-
     <div class="video-card reveal" data-cat="pub">
       <div class="video-thumb">
         <div class="video-overlay"></div>
@@ -236,7 +284,6 @@
         <div class="video-title">Publicité digitale Lancement Produit</div>
       </div>
     </div>
-
     <div class="video-card reveal reveal-delay-1" data-cat="social">
       <div class="video-thumb">
         <div class="video-overlay"></div>
@@ -379,10 +426,9 @@
   <a href="#" class="footer-logo">Arsène GANDONOU</a>
   <p class="footer-copy">© 2026 Conçu par Aichatou BIO SANNA. Tous droits réservés.</p>
   <div class="footer-social">
-    <a href="#" class="soc-btn">in</a>
-    <a href="#" class="soc-btn">yt</a>
-    <a href="#" class="soc-btn">ig</a>
-    <a href="#" class="soc-btn">tt</a>
+    <a href="https://wa.me/22901690701?text=Bonjour%20Ars%C3%A8ne%2C%20je%20vous%20contacte%20depuis%20votre%20portfolio.%20J%27aimerais%20discuter%20d%27un%20projet%20vid%C3%A9o%20avec%20vous." target="_blank" class="soc-btn" title="WhatsApp">wa</a>
+    <a href="https://linkedin.com/in/TON-PROFIL" target="_blank" class="soc-btn" title="LinkedIn">in</a>
+    <a href="https://www.facebook.com/arsengandonou" target="_blank" class="soc-btn" title="Facebook">fb</a>
   </div>
 </footer>
 
@@ -395,6 +441,24 @@
 </div>
 
 <script>
+  // MODE NUIT / JOUR
+  function toggleTheme() {
+    const html = document.documentElement;
+    const btn = document.getElementById('themeToggle');
+    const isLight = html.getAttribute('data-theme') === 'light';
+    html.setAttribute('data-theme', isLight ? 'dark' : 'light');
+    btn.textContent = isLight ? '🌙' : '☀️';
+    localStorage.setItem('theme', isLight ? 'dark' : 'light');
+  }
+
+  // Restaure le thème sauvegardé au rechargement
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('themeToggle');
+    if (btn) btn.textContent = savedTheme === 'light' ? '☀️' : '🌙';
+  });
+
   // AUTO THUMBNAIL
   function generateThumbnail(videoSrc, thumbEl) {
     const video = document.createElement('video');
@@ -437,7 +501,7 @@
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // SMOOTH SCROLL — sans hash dans l'URL
+  // SMOOTH SCROLL
   function scrollToSection(id) {
     const el = document.getElementById(id);
     if (!el) return;
@@ -448,7 +512,7 @@
     history.replaceState(null, '', window.location.pathname);
   }
 
-  // VIDEO MODAL — YouTube ou local
+  // VIDEO MODAL
   function openVideo(url) {
     document.getElementById('videoFrame').src = url + '?autoplay=1';
     document.getElementById('videoModal').classList.add('active');
