@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
   <link href="index.css" rel="stylesheet">
   <style>
+    /* ===================== THÈME ===================== */
     :root {
       --bg: #0a0a0a; --bg2: #111111; --bg3: #1a1a1a;
       --text: #f0f0f0; --gray: #888;
@@ -19,120 +20,165 @@
       --yellow: #c8920a; --yellow-dim: #a67a08;
       --yellow-glow: rgba(200,146,10,0.12);
     }
+    body, nav, section, footer, .service-card, .video-card, .testi-card, .skill-tag {
+      transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+    }
     .theme-toggle {
-      background: var(--bg3);
-      border: 1px solid rgba(245,197,24,0.3);
-      color: var(--text);
-      width: 40px; height: 40px;
-      border-radius: 50%;
+      background: var(--bg3); border: 1px solid rgba(245,197,24,0.3);
+      color: var(--text); width: 40px; height: 40px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.1rem; cursor: pointer; flex-shrink: 0;
       transition: background 0.3s, border-color 0.3s, transform 0.2s;
     }
     .theme-toggle:hover { border-color: var(--yellow); transform: rotate(20deg); }
-    body, nav, section, footer, .service-card, .video-card, .testi-card, .skill-tag {
-      transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
-    }
 
-    /* BOUTON WHATSAPP */
+    /* ===================== WHATSAPP ===================== */
     .btn-whatsapp {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.7rem;
-      background: #25D366;
-      color: #ffffff;
-      border: none;
-      padding: 1rem 2rem;
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-decoration: none;
-      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 0.7rem;
+      background: #25D366; color: #ffffff; border: none;
+      padding: 1rem 2rem; font-family: 'Syne', sans-serif;
+      font-weight: 700; font-size: 0.95rem; letter-spacing: 2px;
+      text-transform: uppercase; text-decoration: none; cursor: pointer;
       transition: transform 0.2s, box-shadow 0.3s, background 0.3s;
     }
     .btn-whatsapp:hover {
-      background: #1ebe5d;
-      transform: translateY(-2px);
+      background: #1ebe5d; transform: translateY(-2px);
       box-shadow: 0 8px 30px rgba(37,211,102,0.3);
     }
-    .btn-whatsapp svg {
-      width: 22px; height: 22px;
-      fill: #ffffff;
-      flex-shrink: 0;
-    }
+    .btn-whatsapp svg { width: 22px; height: 22px; fill: #ffffff; flex-shrink: 0; }
 
-    /* CONTACT SIMPLIFIÉ */
+    /* ===================== CONTACT ===================== */
     .contact-simple {
-      padding: 7rem 4rem;
-      background: var(--bg);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
+      padding: 7rem 4rem; background: var(--bg);
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: center;
     }
     .contact-simple-text .section-body { margin-bottom: 2.5rem; }
-
     .contact-card {
-      background: var(--bg3);
-      border: 1px solid rgba(245,197,24,0.15);
-      padding: 3rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 1.5rem;
-      position: relative;
-      overflow: hidden;
+      background: var(--bg3); border: 1px solid rgba(245,197,24,0.15);
+      padding: 3rem; display: flex; flex-direction: column;
+      align-items: center; text-align: center; gap: 1.5rem;
+      position: relative; overflow: hidden;
     }
     .contact-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--yellow);
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 3px; background: var(--yellow);
     }
     .contact-card-icon {
-      width: 70px; height: 70px;
-      background: rgba(37,211,102,0.1);
-      border: 1px solid rgba(37,211,102,0.3);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
+      width: 70px; height: 70px; background: rgba(37,211,102,0.1);
+      border: 1px solid rgba(37,211,102,0.3); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; font-size: 2rem;
     }
     .contact-card-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.8rem;
-      color: var(--text);
-      letter-spacing: 2px;
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem;
+      color: var(--text); letter-spacing: 2px;
     }
-    .contact-card-desc {
-      font-size: 0.9rem;
-      color: var(--gray);
-      line-height: 1.7;
-      max-width: 280px;
-    }
+    .contact-card-desc { font-size: 0.9rem; color: var(--gray); line-height: 1.7; max-width: 280px; }
     .contact-card-info {
-      background: var(--bg2);
-      border: 1px solid rgba(245,197,24,0.1);
-      padding: 0.7rem 1.5rem;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
-      color: var(--yellow);
-      letter-spacing: 1px;
-      width: 100%;
-      text-align: center;
+      background: var(--bg2); border: 1px solid rgba(245,197,24,0.1);
+      padding: 0.7rem 1.5rem; font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem; color: var(--yellow); letter-spacing: 1px;
+      width: 100%; text-align: center;
     }
 
+    /* ===================== VIDEO THUMB ===================== */
+    .video-thumb {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      background: #0a0a0a;
+      cursor: pointer;
+      display: block;
+    }
+    /* Miniature fixe */
+    .video-thumb img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      transition: transform 0.4s ease, opacity 0.3s ease;
+      z-index: 1;
+    }
+    .video-thumb:hover img { transform: scale(1.05); }
+
+    /* Aperçu animé au survol */
+    .video-preview {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .video-thumb:hover .video-preview { opacity: 1; }
+
+    /* Overlay */
+    .video-overlay {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.28);
+      transition: background 0.3s ease;
+      z-index: 3;
+    }
+    .video-thumb:hover .video-overlay { background: rgba(0,0,0,0.48); }
+
+    /* Bouton play style YouTube */
+    .video-play-btn {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 62px; height: 62px;
+      background: rgba(0,0,0,0.78);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.25s ease, transform 0.25s ease;
+      pointer-events: none; z-index: 4;
+    }
+    .video-thumb:hover .video-play-btn {
+      background: #ff0000;
+      transform: translate(-50%, -50%) scale(1.12);
+    }
+    .video-play-btn svg { width: 26px; height: 26px; fill: #ffffff; margin-left: 4px; }
+
+    /* Badge durée */
+    .video-duration {
+      position: absolute; bottom: 8px; right: 10px;
+      background: rgba(0,0,0,0.82); color: #ffffff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem; font-weight: 600;
+      padding: 2px 7px; border-radius: 3px;
+      pointer-events: none; z-index: 4;
+    }
+
+    /* ===================== MODALE VIDÉO ===================== */
+    #videoModal {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 9999;
+      display: none;
+      align-items: center; justify-content: center;
+    }
+    #videoModal.active { display: flex; }
+    .video-modal-inner {
+      position: relative;
+      width: min(900px, 92vw);
+      aspect-ratio: 16/9;
+    }
+    #videoFrame {
+      width: 100%; height: 100%;
+      display: block; border: none;
+      border-radius: 6px; background: #000; outline: none;
+    }
+    .video-modal-close {
+      position: absolute; top: -46px; right: 0;
+      background: none; border: none; color: #ffffff;
+      font-size: 2rem; cursor: pointer; line-height: 1; padding: 0;
+      transition: color 0.2s, transform 0.2s;
+    }
+    .video-modal-close:hover { color: var(--yellow); transform: scale(1.15); }
+
+    /* ===================== RESPONSIVE ===================== */
     @media (max-width: 900px) {
-      .contact-simple {
-        grid-template-columns: 1fr;
-        padding: 4rem 1.5rem;
-        gap: 3rem;
-      }
+      .contact-simple { grid-template-columns: 1fr; padding: 4rem 1.5rem; gap: 3rem; }
     }
   </style>
 </head>
@@ -289,7 +335,26 @@
   </div>
 </section>
 
-<!-- PORTFOLIO — VIDÉOS YOUTUBE -->
+<!-- =====================================================
+     PORTFOLIO — VIDÉOS LOCALES
+     -------------------------------------------------------
+     Organisation du dossier :
+       ton-projet/
+       ├── index.html
+       ├── index.css
+       ├── 1.jpeg
+       └── videos/
+           ├── video1.mp4   ← vidéo complète
+           ├── video2.mp4
+           ├── video3.mp4
+           ├── video4.mp4
+           ├── video5.mp4
+           ├── thumb1.jpg   ← capture d'écran (miniature)
+           ├── thumb2.jpg
+           ├── thumb3.jpg
+           ├── thumb4.jpg
+           └── thumb5.jpg
+     ===================================================== -->
 <section class="portfolio" id="portfolio">
   <div class="portfolio-header reveal">
     <div>
@@ -297,184 +362,97 @@
       <h2 class="section-title">MES <span class="accent">RÉALISATIONS</span></h2>
     </div>
   </div>
+
   <div class="videos-grid" id="videosGrid">
 
-    <!-- =====================================================
-         REMPLACE CHAQUE "YOUTUBE_ID" par l'ID de ta vidéo
-         Ex: https://youtube.com/watch?v=ABC123  → ID = ABC123
-         ===================================================== -->
-
-    <!-- MODALE VIDÉO -->
-<div id="videoModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;" onclick="closeVideo(event)">
-  <div style="position:relative;width:90%;max-width:900px;aspect-ratio:16/9;">
-    <iframe id="videoFrame" src="" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"
-      style="width:100%;height:100%;border-radius:10px;"></iframe>
-    <button onclick="closeVideo()" style="position:absolute;top:-40px;right:0;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;line-height:1;">✕</button>
-  </div>
-</div>
-
-<script>
-function openVideo(url) {
-  document.getElementById('videoFrame').src = url + '?autoplay=1&rel=0';
-  const modal = document.getElementById('videoModal');
-  modal.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-}
-function closeVideo(e) {
-  if (e && e.target !== document.getElementById('videoModal')) return;
-  document.getElementById('videoFrame').src = '';
-  document.getElementById('videoModal').style.display = 'none';
-  document.body.style.overflow = '';
-}
-</script>
-
-<!-- STYLE BOUTON PLAY & CARDS -->
-<style>
-.video-thumb {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16/9;
-  overflow: hidden;
-  border-radius: 8px;
-  background: #111;
-  cursor: pointer;
-}
-.video-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-}
-.video-thumb:hover img {
-  transform: scale(1.04);
-}
-.video-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.25);
-  transition: background 0.3s;
-}
-.video-thumb:hover .video-overlay {
-  background: rgba(0,0,0,0.45);
-}
-
-/* Bouton Play style YouTube */
-.video-play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  width: 64px;
-  height: 64px;
-  background: rgba(0,0,0,0.75);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease, background 0.2s ease;
-  pointer-events: none;
-}
-.video-thumb:hover .video-play-btn {
-  transform: translate(-50%, -50%) scale(1.12);
-  background: #ff0000; /* rouge YouTube */
-}
-.video-play-btn svg {
-  width: 28px;
-  height: 28px;
-  fill: #fff;
-  margin-left: 4px; /* centrage visuel du triangle */
-}
-
-.video-duration {
-  position: absolute;
-  bottom: 8px;
-  right: 10px;
-  background: rgba(0,0,0,0.8);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 2px 6px;
-  border-radius: 4px;
-  pointer-events: none;
-}
-</style>
-
-<!-- CARDS VIDÉO -->
-<div class="video-card reveal" data-cat="pub">
-  <div class="video-thumb" onclick="openVideo('https://www.youtube.com/embed/scW-48DBICI')">
-    <img src="https://img.youtube.com/vi/scW-48DBICI/2.jpg" onerror="this.style.display='none'" alt="Titre vidéo 1" />
-    <div class="video-overlay"></div>
-    <div class="video-play-btn">
-      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    <!-- CARTE 1 -->
+    <div class="video-card reveal" data-cat="pub">
+      <div class="video-thumb" onclick="openVideo('videos/video1.mp4')">
+        <img src="videos/thumb1.jpg" alt="Titre de la vidéo 1" />
+        <video class="video-preview" src="videos/video1.mp4" muted loop playsinline preload="none"></video>
+        <div class="video-overlay"></div>
+        <div class="video-play-btn">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <span class="video-duration">0:45</span>
+      </div>
+      <div class="video-info">
+        <div class="video-cat">Publicité</div>
+        <div class="video-title">Titre de la vidéo 1</div>
+      </div>
     </div>
-    <span class="video-duration">0:45</span>
-  </div>
-  <div class="video-info">
-    <div class="video-cat">Publicité</div>
-    <div class="video-title">Titre de la vidéo 1</div>
-  </div>
-</div>
 
-<div class="video-card reveal reveal-delay-1" data-cat="social">
-  <div class="video-thumb" onclick="openVideo('https://www.youtube.com/embed/YOUTUBE_ID_2')">
-    <img src="https://img.youtube.com/vi/YOUTUBE_ID_2/hqdefault.jpg" onerror="this.style.display='none'" alt="Produit digital" />
-    <div class="video-overlay"></div>
-    <div class="video-play-btn">
-      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    <!-- CARTE 2 -->
+    <div class="video-card reveal reveal-delay-1" data-cat="social">
+      <div class="video-thumb" onclick="openVideo('videos/video2.mp4')">
+        <img src="videos/thumb2.jpg" alt="Produit digital" />
+        <video class="video-preview" src="videos/video2.mp4" muted loop playsinline preload="none"></video>
+        <div class="video-overlay"></div>
+        <div class="video-play-btn">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <span class="video-duration">0:33</span>
+      </div>
+      <div class="video-info">
+        <div class="video-cat">Motion Design</div>
+        <div class="video-title">Produit digital</div>
+      </div>
     </div>
-    <span class="video-duration">0:33</span>
-  </div>
-  <div class="video-info">
-    <div class="video-cat">Motion Design</div>
-    <div class="video-title">Produit digital</div>
-  </div>
-</div>
 
-<div class="video-card reveal reveal-delay-2" data-cat="corporate">
-  <div class="video-thumb" onclick="openVideo('https://www.youtube.com/embed/YOUTUBE_ID_3')">
-    <img src="https://img.youtube.com/vi/YOUTUBE_ID_3/hqdefault.jpg" onerror="this.style.display='none'" alt="Lancement formation" />
-    <div class="video-overlay"></div>
-    <div class="video-play-btn">
-      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    <!-- CARTE 3 -->
+    <div class="video-card reveal reveal-delay-2" data-cat="corporate">
+      <div class="video-thumb" onclick="openVideo('videos/video3.mp4')">
+        <img src="videos/thumb3.jpg" alt="Lancement d'une formation" />
+        <video class="video-preview" src="videos/video3.mp4" muted loop playsinline preload="none"></video>
+        <div class="video-overlay"></div>
+        <div class="video-play-btn">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <span class="video-duration">0:43</span>
+      </div>
+      <div class="video-info">
+        <div class="video-cat">Publicité</div>
+        <div class="video-title">Lancement d'une formation</div>
+      </div>
     </div>
-    <span class="video-duration">0:43</span>
-  </div>
-  <div class="video-info">
-    <div class="video-cat">Publicité</div>
-    <div class="video-title">Lancement d'une formation</div>
-  </div>
-</div>
 
-<div class="video-card reveal" data-cat="pub">
-  <div class="video-thumb" onclick="openVideo('https://www.youtube.com/embed/YOUTUBE_ID_4')">
-    <img src="https://img.youtube.com/vi/YOUTUBE_ID_4/hqdefault.jpg" onerror="this.style.display='none'" alt="Publicité lancement produit" />
-    <div class="video-overlay"></div>
-    <div class="video-play-btn">
-      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    <!-- CARTE 4 -->
+    <div class="video-card reveal" data-cat="pub">
+      <div class="video-thumb" onclick="openVideo('videos/video4.mp4')">
+        <img src="videos/thumb4.jpg" alt="Publicité digitale Lancement Produit" />
+        <video class="video-preview" src="videos/video4.mp4" muted loop playsinline preload="none"></video>
+        <div class="video-overlay"></div>
+        <div class="video-play-btn">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <span class="video-duration">1:00</span>
+      </div>
+      <div class="video-info">
+        <div class="video-cat">Publicité</div>
+        <div class="video-title">Publicité digitale Lancement Produit</div>
+      </div>
     </div>
-    <span class="video-duration">1:00</span>
-  </div>
-  <div class="video-info">
-    <div class="video-cat">Publicité</div>
-    <div class="video-title">Publicité digitale Lancement Produit</div>
-  </div>
-</div>
 
-<div class="video-card reveal reveal-delay-1" data-cat="social">
-  <div class="video-thumb" onclick="openVideo('https://www.youtube.com/embed/YOUTUBE_ID_5')">
-    <img src="https://img.youtube.com/vi/YOUTUBE_ID_5/hqdefault.jpg" onerror="this.style.display='none'" alt="Produit digital" />
-    <div class="video-overlay"></div>
-    <div class="video-play-btn">
-      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    <!-- CARTE 5 -->
+    <div class="video-card reveal reveal-delay-1" data-cat="social">
+      <div class="video-thumb" onclick="openVideo('videos/video5.mp4')">
+        <img src="videos/thumb5.jpg" alt="Produit digital" />
+        <video class="video-preview" src="videos/video5.mp4" muted loop playsinline preload="none"></video>
+        <div class="video-overlay"></div>
+        <div class="video-play-btn">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <span class="video-duration">1:02</span>
+      </div>
+      <div class="video-info">
+        <div class="video-cat">Motion Design</div>
+        <div class="video-title">Produit digital</div>
+      </div>
     </div>
-    <span class="video-duration">1:02</span>
-  </div>
-  <div class="video-info">
-    <div class="video-cat">Motion Design</div>
-    <div class="video-title">Produit digital</div>
-  </div>
-</div>
+
+  </div><!-- fin videos-grid -->
+</section><!-- fin portfolio -->
+
 <!-- PROCESS -->
 <section class="process">
   <div class="reveal" style="text-align:center">
@@ -559,7 +537,6 @@ function closeVideo(e) {
       <li><div class="ci">⏱</div> Réponse sous 24h</li>
     </ul>
   </div>
-
   <div class="contact-card reveal reveal-delay-2">
     <div class="contact-card-icon">💬</div>
     <div class="contact-card-title">Me Contacter</div>
@@ -567,11 +544,8 @@ function closeVideo(e) {
       Cliquez ci-dessous pour démarrer une conversation directement sur WhatsApp. Je vous réponds rapidement !
     </p>
     <div class="contact-card-info">+229 01 69 07 01 88</div>
-    <a
-      href="https://wa.me/2290169070188?text=Bonjour%20Ars%C3%A8ne%2C%20je%20vous%20contacte%20depuis%20votre%20portfolio.%20J%27aimerais%20discuter%20d%27un%20projet%20vid%C3%A9o%20avec%20vous."
-      target="_blank"
-      class="btn-whatsapp"
-    >
+    <a href="https://wa.me/2290169070188?text=Bonjour%20Ars%C3%A8ne%2C%20je%20vous%20contacte%20depuis%20votre%20portfolio.%20J%27aimerais%20discuter%20d%27un%20projet%20vid%C3%A9o%20avec%20vous."
+       target="_blank" class="btn-whatsapp">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
       </svg>
@@ -590,21 +564,26 @@ function closeVideo(e) {
   </div>
 </footer>
 
-<!-- VIDEO MODAL -->
-<div class="modal-overlay" id="videoModal" onclick="closeVideo(event)">
-  <div class="modal" style="padding:0;background:#000;border-color:rgba(245,197,24,0.3);width:min(800px,90vw)">
-    <iframe id="videoFrame" width="100%" style="aspect-ratio:16/9;display:block;border:none" src="" allowfullscreen allow="autoplay"></iframe>
-    <button class="modal-close" onclick="closeVideoModal()" style="color:var(--yellow);top:0.5rem;right:0.7rem;font-size:1.5rem;background:rgba(0,0,0,0.7)">✕</button>
+<!-- =====================================================
+     MODALE VIDÉO — UNE SEULE, en bas du body
+     ===================================================== -->
+<div id="videoModal" onclick="handleModalClick(event)">
+  <div class="video-modal-inner">
+    <button class="video-modal-close" onclick="closeVideo()">✕</button>
+    <video id="videoFrame" controls playsinline>
+      <source id="videoSource" src="" type="video/mp4" />
+    </video>
   </div>
 </div>
 
+<!-- =====================================================
+     SCRIPTS — UN SEUL BLOC, aucune fonction en double
+     ===================================================== -->
 <script>
-  // =====================
-  // MODE NUIT / JOUR
-  // =====================
+  /* ----- THÈME ----- */
   function toggleTheme() {
-    const html    = document.documentElement;
-    const btn     = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const btn  = document.getElementById('themeToggle');
     const isLight = html.getAttribute('data-theme') === 'light';
     html.setAttribute('data-theme', isLight ? 'dark' : 'light');
     btn.textContent = isLight ? '🌙' : '☀️';
@@ -617,45 +596,63 @@ function closeVideo(e) {
     if (btn) btn.textContent = savedTheme === 'light' ? '☀️' : '🌙';
   });
 
-  // =====================
-  // SCROLL REVEAL
-  // =====================
-  const observer = new IntersectionObserver((entries) => {
+  /* ----- SCROLL REVEAL ----- */
+  const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-  // =====================
-  // SMOOTH SCROLL
-  // =====================
+  /* ----- SMOOTH SCROLL ----- */
   function scrollToSection(id) {
     const el = document.getElementById(id);
     if (!el) return;
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     history.replaceState(null, '', window.location.pathname);
   }
-  if (window.location.hash) {
-    history.replaceState(null, '', window.location.pathname);
+  if (window.location.hash) history.replaceState(null, '', window.location.pathname);
+
+  /* ----- MODALE VIDÉO LOCALE ----- */
+  function openVideo(src) {
+    const modal  = document.getElementById('videoModal');
+    const vid    = document.getElementById('videoFrame');
+    const source = document.getElementById('videoSource');
+    source.src = src;
+    vid.load();
+    vid.play().catch(() => {});
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
   }
 
-  // =====================
-  // VIDEO MODAL YOUTUBE
-  // =====================
-  function openVideo(url) {
-    document.getElementById('videoFrame').src = url + '?autoplay=1';
-    document.getElementById('videoModal').classList.add('active');
-  }
-  function closeVideoModal() {
+  function closeVideo() {
+    const vid    = document.getElementById('videoFrame');
+    const source = document.getElementById('videoSource');
+    vid.pause();
+    source.src = '';
+    vid.load();
     document.getElementById('videoModal').classList.remove('active');
-    document.getElementById('videoFrame').src = '';
-  }
-  function closeVideo(e) {
-    if (e.target === document.getElementById('videoModal')) closeVideoModal();
+    document.body.style.overflow = '';
   }
 
-  // =====================
-  // HAMBURGER MENU
-  // =====================
+  function handleModalClick(e) {
+    if (e.target === document.getElementById('videoModal')) closeVideo();
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeVideo(); });
+
+  /* ----- APERÇU AU SURVOL ----- */
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.video-thumb').forEach(thumb => {
+      const preview = thumb.querySelector('.video-preview');
+      if (!preview) return;
+      thumb.addEventListener('mouseenter', () => preview.play().catch(() => {}));
+      thumb.addEventListener('mouseleave', () => {
+        preview.pause();
+        preview.currentTime = 0;
+      });
+    });
+  });
+
+  /* ----- HAMBURGER ----- */
   function toggleMenu() {
     document.getElementById('hamburger').classList.toggle('open');
     document.getElementById('mobileMenu').classList.toggle('open');
