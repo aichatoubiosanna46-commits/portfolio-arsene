@@ -1046,3 +1046,87 @@ footer {
   .process-steps { grid-template-columns: 1fr; }
   .about-years { right: 0; bottom: 15px; }
 }
+
+.video-card{
+  width: 100%;
+  background: #111;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.video-thumb{
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+}
+
+.video-thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+}
+
+.video-play-btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+
+  border: 3px solid #ffd000;
+  background: rgba(0,0,0,0.7);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffd000;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.video-duration{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+
+  background: #000;
+  color: #ffd000;
+
+  padding: 4px 8px;
+  border-radius: 6px;
+
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.video-info{
+  padding: 18px;
+}
+
+.video-cat{
+  color: #ffd000;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.video-title{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
